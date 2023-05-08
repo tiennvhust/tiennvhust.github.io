@@ -49,35 +49,36 @@
       <div class="intro">
         <h1>Omnidirectional Robot Prototype Development</h1>
         <h3>DESCRIPTION</h3>
-        <p>The original AI-assisted sonification algorithm was first introduced in [1]. This algorithm utilizes the Phase Vocoder (PV) algorithm with an AI-guided time-compression factor as an attention mechanism. It combines AI algorithms' accuracy and speed with sonification's interpretability and intuitiveness to enable a quick, accurate, and interpretable seizure detection method requiring little to no medical workers' training. A real-time adaptation of this algorithm was developed to overcome the limitations in the offline-processing approach in previous studies, it allowes output audio to be always available for listening. Medical workers can have access to real-time audio at any time without having to periodically restart the sonification algorithm, enabling seizure detection as soon as they occur. This new adaptation has modifications in the architecture and algorithm implementation. While the original algorithm was implemented in Matlab, its real-time adaptation was implemented in C/C++ using the available open-source mathematic libraries. A thorough comparison was performed to guarantee the unchanged performance of the AI-assisted sonification algorithm in real-time implementation.</p>
+        <p>Developing an omnidirectional robot prototype for research and development of a navigation system for field robots.</p>
         <h3>CONTRIBUTIONS</h3>
         <ol>
             <b><li>Actuator Control Software</li></b>
             <div class="audio-container">
-      <div class="audio-box">
-            <p>I designed and developed a software to control BLDC motor drivers, which control the robot wheels. Control and query commands are sent to motor driver via an UART communication port. The main language used was C/C++ with Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/bldc_driver">here</a></p>
-      </div>
-      <div class="audio-box">
-        <video controls>
-          <source src="https://user-images.githubusercontent.com/95061513/160898704-c537eab8-fb77-4276-a2b0-b17b6b4d5ffd.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      </div>
-            <b><li>Graphical User Interface (GUI)</li></b>
-            <div class="audio-container">
-                <div class="audio-box">
-                    <p>I designed and developed robot graphical user interface using Qt Creator software. This GUI allows users to control the movement of the robot via a software joystick, displays robot's data and status. The main language used was C/C++ with Qt Creator and Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/vk_omni_gui">here</a>
-                    </p>
-                </div>
-                <div class="audio-box">
-                    <video controls>
-                    <source src="https://user-images.githubusercontent.com/95061513/160900081-84f24e7f-518d-42c9-aed3-01580d267aa2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
+              <div class="audio-box">
+                <p>I designed and developed a software to control BLDC motor drivers, which control the robot wheels. Control and query commands are sent to motor driver via an UART communication port. The main language used was C/C++ with Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/bldc_driver">here</a></p>
+              </div>
+              <div class="audio-box">
+                <video controls>
+                  <source src="https://user-images.githubusercontent.com/95061513/160898704-c537eab8-fb77-4276-a2b0-b17b6b4d5ffd.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
                 </video>
-      </div>
+              </div>
             </div>
+            <b><li>Graphical User Interface</li></b>
+            <div class="audio-container">
+              <div class="audio-box">
+                <p>I designed and developed robot Graphical User Interface (GUI) using Qt Creator software. This GUI allows users to control the movement of the robot via a software joystick, displays robot's data and status. The main language used was C/C++ with Qt Creator and Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/vk_omni_gui">here</a></p>
+              </div>
+              <div class="audio-box">
+                <video controls>
+                  <source src="https://user-images.githubusercontent.com/95061513/160900081-84f24e7f-518d-42c9-aed3-01580d267aa2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <b><li>Safety Management System</li></b>
+            <p>I designed a safety mechanism using a PLC and software to control the operation of the robot. The development of this system involving PLC programing and C/C++ with ROS.<br>Source code: <a href="https://github.com/tiennvhust/vk_omni_plc">here</a></p>
         </ol>
-    </div>
+      </div>
   </body>
 </html>
