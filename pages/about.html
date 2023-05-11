@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style/textstyle.css">
+    <link rel="stylesheet" href="style/navstyle.css">
+  </head>
+  <body>
+    <div class="about">
+        <h1>About Me</h1>
+        <p>A postgraduate research student in Electrical and Electronics Engineering, having two years of working and research experience in embedded software engineering, robotics, digital signal processing, and machine learning.</p>
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Auto width -->
+        <button class="downloadbtn"><i class="fa fa-download"></i> Resume</button>
+    </div>
+  </body>
+  <script>
+        document.getElementById(" Resume").addEventListener("click", function() {
+        var downloadLink = document.createElement("a");
+        downloadLink.href = "path/to/your/file.pdf"; // replace with the actual path to your file
+        downloadLink.download = "filename.pdf"; // replace with the actual filename
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    });
+  </script>
+</html>

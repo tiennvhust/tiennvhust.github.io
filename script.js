@@ -1,52 +1,43 @@
-// Set the number of pages and items per page
-const itemsPerPage = 1;
-
-// Show the first page and hide the rest
-const items = document.querySelectorAll('.item');
-for (let i = itemsPerPage; i < items.length; i++) {
-  items[i].style.display = 'none';
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+  
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
 }
 
-// Add click event listener to each button
-const buttons = document.querySelectorAll('.pagination button');
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', () => {
-    // Determine which page was clicked
-    const pageNum = parseInt(buttons[i].innerText);
+//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
-    // Calculate the start and end index of the items to show
-    const start = (pageNum - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-
-    // Show the items for the selected page and hide the rest
-    for (let j = 0; j < items.length; j++) {
-      if (j >= start && j < end) {
-        items[j].style.display = '';
-      } else {
-        items[j].style.display = 'none';
-      }
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
     }
-
-    // Set the active button style
-    for (let j = 0; j < buttons.length; j++) {
-      buttons[j].classList.remove('active');
-    }
-    buttons[i].classList.add('active');
   });
 }
 
-// Set the first button as active
-buttons[0].classList.add('active');
-
-// Load content of other HTML files into items
-for (let i = 0; i < items.length; i++) {
-  const item = items[i];
-  const url = item.getAttribute('data-url');
-
-  fetch(url)
-    .then(response => response.text())
-    .then(html => {
-      item.innerHTML = html;
-    })
-    .catch(error => console.error(error));
+function loadPage(page) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("page-content").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", page, true);
+    xhttp.send();
+    closeNav();
 }
+
+loadPage('pages/about.html');

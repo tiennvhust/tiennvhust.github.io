@@ -1,0 +1,47 @@
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+    font-family: 'Helvetica', san-serif;
+    color: #333;
+}
+
+h1 {
+    size: 40px;
+    color: darkblue;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.description {
+    width: 80%;
+    max-width: 800pt;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.about {
+    width: 80%;
+    max-width: 800pt;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+}

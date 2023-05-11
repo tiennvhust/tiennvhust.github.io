@@ -1,80 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tien Nguyen</title>
-    <style>
-      /* Set font family and color for text */
-      body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        font-family: 'Helvetica', san-serif;
-        color: #333;
-      }
-
-      .pagination {
-        text-align: center;
-        display: inline-block;
-      }
-
-      .pagination button {
-        color: black;
-        float: left;
-        padding: 8px 16px;
-        text-decoration: none;
-        transition: background-color .3s;
-        border: 1px solid #ddd;
-        margin: 0 4px;
-      }
-
-      .pagination button.active {
-        background-color: #4CAF50;
-        color: white;
-        border: 1px solid #4CAF50;
-      }
-
-      .pagination button:hover:not(.active) {background-color: #ddd;}
-
-      /* Style for the container div */
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* align-items: center; */
-      }
-      
-      /* Style for the top half of the page */
-      .intro {
-        width: 800pt;
-        /* max-width: 800pt; */
-        /* height: 50%; */
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        text-align: justify;
-      }
-    </style>
+    <title>Tien V Nguyen</title>
+    <link rel="stylesheet" href="style/navstyle.css">
   </head>
   <body>
-    <div class="container">
-      <!-- Top half of the page -->
-      <div class="intro">
-        <h1>TIEN V. NGUYEN</h1>
-        <h3>INTRODUCTION</h3>
-        <p></p>
-        <h3>PROJECTS</h3>
-        <p></p>
-        <p></p>
-        <div class="pagination">
-          <button href="#">1</button>
-          <button href="#">2</button>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" onclick="loadPage('pages/about.html')">About</a>
+            <a href="#" onclick="loadPage('Resume.html')">Resume</a>
+            <button class="dropdown-btn">Projects
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#" onclick="loadPage('pages/omni.html')">Omni</a>
+                <!-- <<a href="#" onclick="loadPage('pages/sonic.html')">test</a> -->
+            </div>
+            <a href="#" onclick="loadPage('contact.html')">Contact</a>
         </div>
-      </div>
-      <div class="item" data-url="pages/omni.html"></div>
-      <div class="item" data-url="pages/test.html"></div>
-    </div>
-    <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Use any element to open the sidenav -->
+        <span onclick="openNav()"><button class="menubtn"><i class="fa fa-bars"></i> Menu</button></span>
+
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <div id="main">
+            <div id="page-content"></div>
+        </div>
+        <script src="script.js"></script>
   </body>
 </html>
