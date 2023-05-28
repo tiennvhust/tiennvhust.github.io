@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Omnidirectional Robot Prototype Development</title>
+    <title>Real-time sonification algorithm</title>
     <style>
       video {
         width: 100%;
@@ -28,39 +28,31 @@
   </head>
   <body>
       <div class="description">
-        <h1>Omnidirectional Robot Prototype Development</h1>
+        <h1>Real-time, AI-assisted Sonification Algorithm for Neonatal EEG</h1>
         <h3>DESCRIPTION</h3>
-        <p>Developing an omnidirectional robot prototype for research and development of a navigation system for field robots.</p>
-        <h3>CONTRIBUTIONS</h3>
-        <p>I designed the electrical system, safety management system, actuator control software, and graphical user interface.</p>
+        <p>Neonatal seizures are a critical problem globally, which can lead to long-term developmental and neurological disabilities or even death. Early detection of seizures is crucial for preventing these outcomes by enabling timely intervention. However, clinical detection of neonatal seizures is challenging due to the lack of physical symptoms and limited access to experts in EEG analysis. Artificial Intelligence (AI) has emerged as a popular tool to assist medical professionals in interpreting EEG signals and detecting seizures. A novel method of AI-assisted EEG sonification was introduced to compensate for the lack of explainability in AI’s decisions. This method uses sound to detect seizures intuitively while exploiting AI’s effectiveness as an attention mechanism. Besides low power consumption, the real-time operating capability is also essential for adapting this algorithm in clinical settings, which is unattainable with the offline processing approach used in previous studies. This study presents a scalable and real-time adaptation of this algorithm with an ultra-low power implementation. This application provides continuous audio output for medical workers, allowing for immediate access to audio analysis of the EEG signals. An on-chip ultra-low power neural network accelerator enables the implementation to scale up the number of monitored EEG channels. The real-time algorithm has an average power consumption of 13 milliwatts, allowing it to operate for more than eleven days on a mobile phone battery with a capacity of 3500 mAh.</p>
         <ol>
-            <b><li>Actuator Control Software</li></b>
+            <b><li>Original AI-assited Sonification Algorithm</li></b>
             <div class="video-container">
               <div class="video-box">
-                <p>I designed and developed a software to control BLDC motor drivers, which control the robot wheels. Control and query commands are sent to motor driver via an UART communication port. The main language used was C/C++ with Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/bldc_driver">here</a></p>
+                <p>A novel method of AI-driven spatial neonatal EEG sonification has been presented in [1]. It utilizes the Phase Vocoder (PV) algorithm with an AI-guided time-compression factor as an attention mechanism. The AI probabilities are used to modulate the audio playback speed, maintaining focus on the EEG regions with a high probability of seizures, while allowing quick audio rendering over non-seizure EEG segments. This method combines the accuracy and speed of AI algorithms with the interpretability and intuitiveness of sonification, it enables a quick, accurate, and interpretable seizure detection method while requiring little to no training from medical workers.</p>
               </div>
               <div class="video-box">
-                <video controls>
-                  <source src="https://user-images.githubusercontent.com/95061513/160898704-c537eab8-fb77-4276-a2b0-b17b6b4d5ffd.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <img src="../images/original.gif">
               </div>
             </div>
-            <b><li>Graphical User Interface</li></b>
+            <b><li>Real-Time Adaptation</li></b>
             <div class="video-container">
               <div class="video-box">
-                <p>I designed and developed robot Graphical User Interface (GUI) using Qt Creator software. This GUI allows users to control the movement of the robot via a software joystick, displays robot's data and status. The main language used was C/C++ with Qt Creator and Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/vk_omni_gui">here</a></p>
+                <p>This study presents a real-time adaptation of the AI-assisted EEG sonification algorithm and its implementation on an ultra-low power embedded system. A significant advantage of a real-time implementation is that the output audio is always available for listening. Medical workers can have access to real-time audio at any time without having to periodically restart the sonification algorithm, enabling seizure detection as soon as they occur. This ultra-low-power implementation is suitable for wearable devices, which can be widely adopted in clinical settings, including Intensive Care Units, for continuous neonatal EEG monitoring.</p>
               </div>
               <div class="video-box">
-                <video controls>
-                  <source src="https://user-images.githubusercontent.com/95061513/160900081-84f24e7f-518d-42c9-aed3-01580d267aa2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                <img src="../images/realtime.gif">
               </div>
             </div>
-            <b><li>Safety Management System</li></b>
-            <p>I designed a safety mechanism using a PLC and software to control the operation of the robot. The development of this system involving PLC programing and C/C++ with ROS.<br>Source code: <a href="https://github.com/tiennvhust/vk_omni_plc">here</a></p>
         </ol>
+        <h3>REFERENCES</h3>
+        <p>[1]&nbsp;S. Gomez-Quintana, A. O’Shea, A. Factor, E. Popovici, and A. Temko, “A method for AI assisted human interpretation of neonatal EEG,” Sci Rep, vol. 12, no. 1, p. 10932, 2022, doi: 10.1038/s41598-022-14894-4.</p>
       </div>
   </body>
 </html>
