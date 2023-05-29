@@ -16,14 +16,4 @@
         <a href="../files/TienVNguyenCV.pdf" download="tienvannguyen_cv.pdf"><button class="downloadbtn"><i class="fa fa-download"></i> Resume</button></a>
     </div>
   </body>
-  <script>
-        document.getElementById(" Resume").addEventListener("click", function() {
-        var downloadLink = document.createElement("a");
-        downloadLink.href = "../files/TienVNguyenCV.pdf"; // replace with the actual path to your file
-        downloadLink.download = "TienVNguyenCV.pdf"; // replace with the actual filename
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-    });
-  </script>
 </html>
