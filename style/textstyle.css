@@ -45,3 +45,7 @@ p {
     justify-content: center;
     font-family: "Times New Roman", Times, serif;
 }
+
+table {
+    border-collapse: collapse;
+}
