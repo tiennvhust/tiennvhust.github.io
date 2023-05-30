@@ -46,6 +46,15 @@ p {
     font-family: "Times New Roman", Times, serif;
 }
 
+table, th, td {
+    border: 1px solid;
+}
+
+th, td {
+    text-align: left;
+}
+
 table {
+    width: 100%;
     border-collapse: collapse;
 }
