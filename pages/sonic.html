@@ -51,6 +51,32 @@
               </div>
             </div>
         </ol>
+        <h3>Deep Learning Algorithm Quantization</h3>
+        <p>Before the model can be deployed on the MAX78002’s deep neural network accelerator, its parameters must be quantized to 8-bit integers. In practice, there are two main techniques for quantization: Post Training Quantization (PTQ) and Quantization Aware Training (QAT). On the one hand, PTQ can be used to quantize a pre-trained model without any re-training requirements. QAT on the other hand immensely improves the post-quantization performance. The dataset used for quantization aware training and validation is a public dataset of neonatal EEG provided by the Helsinki University Hospital [2]. This dataset is split into a trainset of 39 neonates and a test set of 40 neonates, each dataset contains approximately the same percentage of seizures.</p>
+        <p>Table I compares the performance of the original model and its 8-bits integer version against the test set. The results showed that the quantized model has a 0.8% drop in Area under the ROC Curve (AUC). However, by converting the model from 32-bit floating point into 8-bit integer the size of the model was reduced by 75% and the inference speed is significantly increased.</p>
+        <table>
+          <tr>
+            <th>Model</th>
+            <th>Bit-width</th>
+            <th>Number of Parameters</th>
+            <th>Size (bytes)</th>
+            <th>AUC (%)</th>
+          </tr>
+          <tr>
+            <td>Original</td>
+            <td>32</td>
+            <td>25,156</td>
+            <td>102,152</td>
+            <td>95.4</td>
+          </tr>
+          <tr>
+            <td>Quantized</td>
+            <td>8</td>
+            <td>25,156</td>
+            <td>25,156</td>
+            <td>94.6</td>
+          </tr>
+        </table>
         <h3>REFERENCES</h3>
         <p>[1]&nbsp;S. Gomez-Quintana, A. O’Shea, A. Factor, E. Popovici, and A. Temko, “A method for AI assisted human interpretation of neonatal EEG,” Sci Rep, vol. 12, no. 1, p. 10932, 2022, doi: 10.1038/s41598-022-14894-4.</p>
       </div>
