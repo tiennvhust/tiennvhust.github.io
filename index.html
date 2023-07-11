@@ -10,16 +10,10 @@
   <body>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#" onclick="loadPage('pages/about.html')">About</a>
-            <a href="#" onclick="loadPage('Resume.html')">Resume</a>
-            <button class="dropdown-btn">Projects
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container">
-                <a href="#" onclick="loadPage('pages/omni.html')">Omnidirectional Robot</a>
-                <a href="#" onclick="loadPage('pages/sonic.html')">Sonification Algorithm</a>
-            </div>
-            <a href="#" onclick="loadPage('contact.html')">Contact</a>
+            <a href="#About">About</a>
+            <a href="../files/TienVNguyenCV.pdf" download="tienvannguyen_cv.pdf">Download CV</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
         </div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Use any element to open the sidenav -->
@@ -28,7 +22,7 @@
         <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
         <div class="background">
             <div class="about">
-                <h1>Tien Van Nguyen</h1>
+                <h1 id="About">Tien Van Nguyen</h1>
                 <p>A postgraduate research student in Electrical and Electronics Engineering, having two years of working and research experience in embedded software engineering, robotics, digital signal processing, and machine learning.</p>
             </div>
         </div>
@@ -88,8 +82,8 @@
                 <h4>Embedded Software Engineer</h4>
             </div>
             <div class="cvsection">
-                <h2>Projects</h2>
-                <h3>Omnidirectional Robot Prototype Development <button onclick="showContentFnc('project1');" type="button" class="collapsible">show/hide</button></h3>
+                <h2 id="Projects">Projects</h2>
+                <h3 class="collapsible">Omnidirectional Robot Prototype Development</h3>
                 <div id="project1">
                     <h4>DESCRIPTION</h4>
                     <p>Developing an omnidirectional robot prototype for research and development of a navigation system for field robots.</p>
@@ -125,7 +119,7 @@
                     </ol>
                   </div>
                   <!-- Project 2 -->
-                  <h3>Real-time, AI-assisted Sonification Algorithm for Neonatal EEG</h3>
+                  <h3 class="collapsible">Real-time, AI-assisted Sonification Algorithm for Neonatal EEG</h3>
                   <div id="project2">
                     <h4>DESCRIPTION</h4>
                     <p>Neonatal seizures are a critical problem globally, which can lead to long-term developmental and neurological disabilities or even death. Early detection of seizures is crucial for preventing these outcomes by enabling timely intervention. However, clinical detection of neonatal seizures is challenging due to the lack of physical symptoms and limited access to experts in EEG analysis. Artificial Intelligence (AI) has emerged as a popular tool to assist medical professionals in interpreting EEG signals and detecting seizures. A novel method of AI-assisted EEG sonification was introduced to compensate for the lack of explainability in AI’s decisions. This method uses sound to detect seizures intuitively while exploiting AI’s effectiveness as an attention mechanism. Besides low power consumption, the real-time operating capability is also essential for adapting this algorithm in clinical settings, which is unattainable with the offline processing approach used in previous studies. This study presents a scalable and real-time adaptation of this algorithm with an ultra-low power implementation. This application provides continuous audio output for medical workers, allowing for immediate access to audio analysis of the EEG signals. An on-chip ultra-low power neural network accelerator enables the implementation to scale up the number of monitored EEG channels. The real-time algorithm has an average power consumption of 13 milliwatts, allowing it to operate for more than eleven days on a mobile phone battery with a capacity of 3500 mAh.</p>
@@ -181,5 +175,10 @@
             </div>
         </div>
         <script src="script.js"></script>
+        <div class="background">
+          <div class="contact">
+              <p>nguyentien97.hust@gmail.com</p>
+          </div>
+        </div>
   </body>
 </html>

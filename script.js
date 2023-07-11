@@ -28,12 +28,16 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
-function showContentFnc(name) {
-  this.classList.toggle("active");
-  var x = document.getElementById(name);
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+var btn = document.getElementsByClassName("collapsible");
+
+for (i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
 }

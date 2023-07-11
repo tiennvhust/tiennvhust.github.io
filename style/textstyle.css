@@ -28,13 +28,21 @@ html, body{
     flex-direction: column;
 }
 
+.contact {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .about h1 {
     font-size: 40px;
     color: midnightblue;
 }
 
 .cvsection {
-    width: 80vh;
+    width: 80%;
     max-width: 800pt;
     display: flex;
     justify-content: center;
