@@ -28,16 +28,12 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
-function loadPage(page) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("page-content").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET", page, true);
-    xhttp.send();
-    closeNav();
+function showContentFnc(name) {
+  this.classList.toggle("active");
+  var x = document.getElementById(name);
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }
-
-loadPage('pages/about.html');

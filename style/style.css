@@ -1,0 +1,69 @@
+#project1 {
+    display: none;
+}
+
+#project2{
+    display: none;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+/* Style for video container */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Style for video box */
+.video-box {
+  flex-basis: 48%;
+  /*margin-bottom: 1rem;*/
+  text-align: justify;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+th, td {
+    text-align: left;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+}

@@ -1,58 +1,57 @@
+html, body{
+    height: 100vh;
+    font-family: 'Raleway', san-serif;
+    color: #333;
+}
+
 .main {
     align-items: center;
-    font-family: 'Helvetica', san-serif;
-    color: #333;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-
-h1 {
-    size: 40px;
-    color: midnightblue;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-h3 {
-    color: steelblue;
-    font-size: 20px;
-}
-
-p {
-    font-size: 14px;
-    text-align: justify;
+.background {
+    background-image: url('images/background.jpg');
+    /* background-color: aliceblue; */
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
 .about {
-    background-color: aliceblue;
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.education {
-    width: 80%;
+.about h1 {
+    font-size: 40px;
+    color: midnightblue;
+}
+
+.cvsection {
+    width: 80vh;
     max-width: 800pt;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* text-align: justify; */
 }
 
-table, th, td {
-    border: 1px solid;
+.cvsection h2 {
+    font-size: 30px;
 }
 
-th, td {
-    text-align: left;
+.cvsection h3 {
+    color: steelblue;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-table {
-    width: 80%;
-    border-collapse: collapse;
+.cvsection p {
+    font-size: 14px;
+    margin-bottom: 5px;
 }
