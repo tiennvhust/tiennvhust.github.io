@@ -8,21 +8,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   </head>
   <body>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="navbar">
             <a href="#About">About</a>
-            <a href="../files/TienVNguyenCV.pdf" download="tienvannguyen_cv.pdf">Download CV</a>
             <a href="#Projects">Projects</a>
             <a href="#Contact">Contact</a>
         </div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Use any element to open the sidenav -->
-        <span onclick="openNav()"><button class="menubtn"><i class="fa fa-bars"></i> Menu</button></span>
-
         <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
         <div class="background">
-            <div class="about">
-                <h1 id="About">Tien Van Nguyen</h1>
+            <div class="about" id="About">
+                <h1>Tien Van Nguyen</h1>
                 <p>A postgraduate research student in Electrical and Electronics Engineering, having two years of working and research experience in embedded software engineering, robotics, digital signal processing, and machine learning.</p>
             </div>
         </div>
@@ -81,8 +76,8 @@
                 </p>
                 <h4>Embedded Software Engineer</h4>
             </div>
-            <div class="cvsection">
-                <h2 id="Projects">Projects</h2>
+            <div class="cvsection" id="Projects">
+                <h2>Projects</h2>
                 <h3 class="collapsible">Omnidirectional Robot Prototype Development</h3>
                 <div id="project1">
                     <h4>DESCRIPTION</h4>
@@ -174,9 +169,10 @@
                   </div>
             </div>
         </div>
-        <script src="script.js"></script>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/navscript.js"></script>
         <div class="background">
-          <div class="contact">
+          <div class="contact" id="Contact">
               <p>nguyentien97.hust@gmail.com</p>
           </div>
         </div>
