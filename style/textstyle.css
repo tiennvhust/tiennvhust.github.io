@@ -12,8 +12,8 @@ html, body{
 }
 
 .background {
-    background-image: url('images/background.jpg');
-    /* background-color: aliceblue; */
+    /* background-image: url('../images/background.jpg'); */
+    background-color: #FCFCF7;
     min-height: 100vh;
     background-position: center;
     background-size: cover;
@@ -38,7 +38,8 @@ html, body{
 
 .about h1 {
     font-size: 40px;
-    color: midnightblue;
+    font-weight: bolder;
+    color: #2F3C59;
 }
 
 .cvsection {
