@@ -37,6 +37,22 @@
     color: white;
 }
 
+/* Style buttons */
+.downloadbtn {
+    background-color: darkgray;
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 64px;
+}
+  
+/* Darker background on mouse-over */
+.downloadbtn:hover {
+  background-color: black;
+}
+
 .contact-container {
     display: flex;
     min-width: 100vh;
