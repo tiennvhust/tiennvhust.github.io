@@ -71,6 +71,18 @@ video {
     height: auto;
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
 /* Style for video container */
 .video-container {
   display: flex;
@@ -88,6 +100,9 @@ video {
 
 table, th, td {
     border: 1px solid;
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th, td {

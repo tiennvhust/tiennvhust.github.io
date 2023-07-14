@@ -140,9 +140,11 @@
                         </div>
                     </ol>
                     <h4>Deep Learning Algorithm Quantization</h4>
-                    <p>Before the model can be deployed on the MAX78002’s deep neural network accelerator, its parameters must be quantized to 8-bit integers. In practice, there are two main techniques for quantization: Post Training Quantization (PTQ) and Quantization Aware Training (QAT). On the one hand, PTQ can be used to quantize a pre-trained model without any re-training requirements. QAT on the other hand immensely improves the post-quantization performance. The dataset used for quantization aware training and validation is a public dataset of neonatal EEG provided by the Helsinki University Hospital [2]. This dataset is split into a trainset of 39 neonates and a test set of 40 neonates, each dataset contains approximately the same percentage of seizures.<br>Table I compares the performance of the original model and its 8-bits integer version against the test set. The results showed that the quantized model has a 0.8% drop in Area under the ROC Curve (AUC). However, by converting the model from 32-bit floating point into 8-bit integer the size of the model was reduced by 75% and the inference speed is significantly increased.</p>
+                    <p>Before the model can be deployed on the MAX78002’s deep neural network accelerator, its parameters must be quantized to 8-bit integers. In practice, there are two main techniques for quantization: Post Training Quantization (PTQ) and Quantization Aware Training (QAT). On the one hand, PTQ can be used to quantize a pre-trained model without any re-training requirements. QAT on the other hand immensely improves the post-quantization performance. The dataset used for quantization aware training and validation is a public dataset of neonatal EEG provided by the Helsinki University Hospital [2]. This dataset is split into a trainset of 39 neonates and a test set of 40 neonates, each dataset contains approximately the same percentage of seizures.</p>
+                    <img src="images/CNNtraining.png" alt="training" style="width: 40%; margin-top: 15px;">
+                    <p>Table I compares the performance of the original model and its 8-bits integer version against the test set. The results showed that the quantized model has a 0.8% drop in Area under the ROC Curve (AUC). However, by converting the model from 32-bit floating point into 8-bit integer the size of the model was reduced by 75% and the inference speed is significantly increased.</p>
                     <table>
-                      <caption>TABLE I. 	POST QUANTIZATION PERFORMANCE</caption>
+                      <caption>TABLE I. 	Post Quantization Performance</caption>
                       <tr>
                         <th>Model</th>
                         <th>Bit-width</th>
@@ -165,6 +167,32 @@
                         <td>94.6</td>
                       </tr>
                     </table>
+                    <h4>Implementation Results</h4>
+                    <p>MAX78002 is a new breed of AI microcontrollers designed for running neural networks with ultra-low power consumption developed by Analog Devices. It features an Arm Cortex-M4 with FPU CPU and an ultra-low-power deep neural network accelerator. The neural network accelerator allows larger machine leaming models to run at ultra-low power while significantly speeding up the inference, allowing the microprocessor to handle more computationally intensive tasks. The MAX78002 can accommodate sophisticated algorithms such as the AI-assisted EEG sonification algorithm. Its high computational capability is necessary to maintain the real-time processing ability when increasing the number of EEG input channels.</p>
+                    <img src="images/implementation.gif" alt="implementation" style="width: 40%; margin-top: 15px;">
+                    <p>Table II presents the time required for digital signal processing (DSP) tasks to process one second of 8-channel 256HzEEG. The pre-processing task is the most time-consuming in the best-case scenario when the seizure probability is zero. In the worst case, with the probability of seizure equal to one, phase-vocoder becomes the most time-consuming task, taking 350 milliseconds to process one second of 8-channel data. Due to its multi-threading architecture, this is also the maximum time consumption of the algorithm, well within the one-second time budget for the real-time application.</p>
+                    <table>
+                      <caption>TABLE II. 	Time Consumption Of Digital Signal Processing Tasks</caption>
+                      <tr>
+                        <td rowspan="2">Task</td>
+                        <td colspan="2">Time (milliseconds)</td>
+                      </tr>
+                      <tr>
+                        <th>Best-case</th>
+                        <th>Worst-case</th>
+                      </tr>
+                      <tr>
+                        <td>Phase-Vocoder</td>
+                        <td>77</td>
+                        <td>350</td>
+                      </tr>
+                      <tr>
+                        <td>Pre-processing</td>
+                        <td>210</td>
+                        <td>-</td>
+                      </tr>
+                    </table>
+                    <p>The FCNN with a depth of 10 layers and a total of 25, 156 parameters takes 248 μs to calculate its classification probability for one second of single-channel EEG. This inference time is tremendously reduced compared to neural networks running on microprocessors. The parallel operation of the neural network accelerator allows the Arm Cortex-M4 processor to take on more computationally intensive tasks without failing the real-time requirements.</p>
                     <h4>REFERENCES</h4>
                     <p>[1]&nbsp;S. Gomez-Quintana, A. O’Shea, A. Factor, E. Popovici, and A. Temko, “A method for AI assisted human interpretation of neonatal EEG,” Sci Rep, vol. 12, no. 1, p. 10932, 2022, doi: 10.1038/s41598-022-14894-4.<br>[2]&nbsp;N. Stevenson, K. Tapani, L. Lauronen, and S. Vanhatalo, “A dataset of neonatal EEG recordings with seizures annotations,” Jun. 2018, doi: 10.5281/ZENODO.2547147.</p>
                   </div>
