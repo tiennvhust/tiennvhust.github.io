@@ -1,5 +1,5 @@
 html, body{
-    height: 100vh;
+    height: 100%;
     font-family: 'Raleway', san-serif;
     color: #333;
 }
@@ -9,6 +9,7 @@ html, body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100vh;
 }
 
 .background {
@@ -23,6 +24,7 @@ html, body{
 .about {
     display: flex;
     height: 100vh;
+    /* width: 100vh; */
     /* max-width: 80%; */
     align-items: center;
     justify-content: center;
@@ -32,7 +34,7 @@ html, body{
 .contact {
     display: flex;
     height: 100vh;
-    width: 100vh;
+    /* width: 100vh; */
     align-items: center;
     justify-content: center;
     flex-direction: column;
