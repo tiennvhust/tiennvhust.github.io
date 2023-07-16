@@ -55,7 +55,6 @@
 
 .contact-container {
     display: flex;
-    min-width: 100vh;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;  
