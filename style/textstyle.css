@@ -1,5 +1,5 @@
 html, body{
-    height: 100vh;
+    /* height: 100%; */
     font-family: 'Raleway', san-serif;
     color: #333;
 }
@@ -12,7 +12,6 @@ html, body{
 }
 
 .background {
-    /* background-image: url('../images/background.jpg'); */
     background-color: #FCFCF7;
     min-height: 100vh;
     background-position: center;
@@ -23,19 +22,21 @@ html, body{
 .about {
     display: flex;
     height: 100vh;
-    /* max-width: 80%; */
+    width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .contact {
     display: flex;
     height: 100vh;
-    width: 100vh;
+    width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-size: 12px;
 }
 
 .about h1 {
