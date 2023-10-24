@@ -117,7 +117,12 @@
                   <h3 class="collapsible">Real-time, AI-assisted Sonification Algorithm for Neonatal EEG</h3>
                   <div id="project2">
                     <h4>DESCRIPTION</h4>
-                    <p>Neonatal seizures are a critical problem globally, which can lead to long-term developmental and neurological disabilities or even death. Early detection of seizures is crucial for preventing these outcomes by enabling timely intervention. However, clinical detection of neonatal seizures is challenging due to the lack of physical symptoms and limited access to experts in EEG analysis. Artificial Intelligence (AI) has emerged as a popular tool to assist medical professionals in interpreting EEG signals and detecting seizures. A novel method of AI-assisted EEG sonification was introduced to compensate for the lack of explainability in AI’s decisions. This method uses sound to detect seizures intuitively while exploiting AI’s effectiveness as an attention mechanism. Besides low power consumption, the real-time operating capability is also essential for adapting this algorithm in clinical settings, which is unattainable with the offline processing approach used in previous studies. This study presents a scalable and real-time adaptation of this algorithm with an ultra-low power implementation. This application provides continuous audio output for medical workers, allowing for immediate access to audio analysis of the EEG signals. An on-chip ultra-low power neural network accelerator enables the implementation to scale up the number of monitored EEG channels. The real-time algorithm has an average power consumption of 13 milliwatts, allowing it to operate for more than eleven days on a mobile phone battery with a capacity of 3500 mAh.</p>
+                    <p>
+                      This study presents a real-time processing design of the AI-assisted EEG sonification algorithm in [16] and its implementation on an ultra-low power microcontroller. Two patient-independent seizure detection neural networks were evaluated for their performance and power consumption on the microcontroller’s dedicated neural network accelerator. The real-time design allows for continuous availability of audio, saving time and effort for medical staff and enabling seizure detection as early as it occurs. The ultra-low power application can be used in clinical settings, such as Neonatal Intensive Care Units, for continuous EEG analysis. It is suitable for wearable devices.
+                    </p>
+                    <p>
+                      The original algorithm had been re-designed in architecture along with some of its parts to process real-time data. The new architecture also needs to be high-speed and memory efficient, suitable for running on a resource-constrained platform. Taking advantage of a multithreading design, this architecture enables the processor to perform all digital signal processing tasks concurrently while retrieving the classification outputs of the seizure detection algorithm.
+                    </p>
                     <ol>
                         <b><li>Original AI-assited Sonification Algorithm</li></b>
                         <div class="video-container">
@@ -138,62 +143,60 @@
                           </div>
                         </div>
                     </ol>
-                    <h4>Deep Learning Algorithm Quantization</h4>
-                    <p>Before the model can be deployed on the MAX78002’s deep neural network accelerator, its parameters must be quantized to 8-bit integers. In practice, there are two main techniques for quantization: Post Training Quantization (PTQ) and Quantization Aware Training (QAT). On the one hand, PTQ can be used to quantize a pre-trained model without any re-training requirements. QAT on the other hand immensely improves the post-quantization performance. The dataset used for quantization aware training and validation is a public dataset of neonatal EEG provided by the Helsinki University Hospital [2]. This dataset is split into a trainset of 39 neonates and a test set of 40 neonates, each dataset contains approximately the same percentage of seizures.</p>
-                    <img src="images/CNNtraining.png" alt="training" style="width: 40%; margin-top: 15px;">
-                    <p>Table I compares the performance of the original model and its 8-bits integer version against the test set. The results showed that the quantized model has a 0.8% drop in Area under the ROC Curve (AUC). However, by converting the model from 32-bit floating point into 8-bit integer the size of the model was reduced by 75% and the inference speed is significantly increased.</p>
+                    <h4>Listen to EEG</h4>
+                    <p>The real-time (online) algorithm implemented with C/C++ is validated against the original design which implemented on Matlab. This website provideds a more interactive comparision between the two algorithm designs: <a href="https://tiennvhust.github.io/listen2eeg.github.io">Listen to EEG</a></p>
+                    <h4>Neural Networks Quantization and Validation</h4>
+                    <p>Two patient-independent seizure detection neural networks were implemented in this low-power application and compared in performance: A Fully Convolutional Neural Network (FCNN) contains three feature extraction blocks and a fully convolutional classification block, referred to as the VGGNet in this study [3]; and an improved Residual Network (ResNet) with total of 13 convolution layers in 4 feature extraction blocks [4].</p>
+                    <p>Table I summarizes the performances of the ResNet and the VGGNet in both floating-point and integer formats. The ResNet model outperforms the VGGNet model in both floating-point and 8bit integers representations by 2.6% and 3% respectively.</p>
                     <table>
                       <caption>TABLE I. 	Post Quantization Performance</caption>
                       <tr>
                         <th>Model</th>
-                        <th>Bit-width</th>
                         <th>Number of Parameters</th>
                         <th>Size (bytes)</th>
                         <th>AUC (%)</th>
+                        <th>MAX78002 Inference Time (us)</th>
                       </tr>
                       <tr>
-                        <td>Original</td>
-                        <td>32</td>
-                        <td>25,156</td>
+                        <td>ResNet 32b</td>
+                        <td>45,090</td>
+                        <td>180,360</td>
+                        <td>98.0</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>ResNet 8b</td>
+                        <td>45,090</td>
+                        <td>45,090</td>
+                        <td>97.6</td>
+                        <td>937</td>
+                      </tr>
+                      <tr>
+                        <td>VGG 32b</td>
+                        <td>25,538</td>
                         <td>102,152</td>
                         <td>95.4</td>
+                        <td>-</td>
                       </tr>
                       <tr>
-                        <td>Quantized</td>
-                        <td>8</td>
-                        <td>25,156</td>
-                        <td>25,156</td>
+                        <td>VGG 8b</td>
+                        <td>25,538</td>
+                        <td>25,538</td>
                         <td>94.6</td>
+                        <td>248</td>
                       </tr>
                     </table>
                     <h4>Implementation Results</h4>
-                    <p>MAX78002 is a new breed of AI microcontrollers designed for running neural networks with ultra-low power consumption developed by Analog Devices. It features an Arm Cortex-M4 with FPU CPU and an ultra-low-power deep neural network accelerator. The neural network accelerator allows larger machine leaming models to run at ultra-low power while significantly speeding up the inference, allowing the microprocessor to handle more computationally intensive tasks. The MAX78002 can accommodate sophisticated algorithms such as the AI-assisted EEG sonification algorithm. Its high computational capability is necessary to maintain the real-time processing ability when increasing the number of EEG input channels.</p>
-                    <img src="images/implementation.gif" alt="implementation" style="width: 40%; margin-top: 15px;">
-                    <p>Table II presents the time required for digital signal processing (DSP) tasks to process one second of 8-channel 256HzEEG. The pre-processing task is the most time-consuming in the best-case scenario when the seizure probability is zero. In the worst case, with the probability of seizure equal to one, phase-vocoder becomes the most time-consuming task, taking 350 milliseconds to process one second of 8-channel data. Due to its multi-threading architecture, this is also the maximum time consumption of the algorithm, well within the one-second time budget for the real-time application.</p>
-                    <table>
-                      <caption>TABLE II. 	Time Consumption Of Digital Signal Processing Tasks</caption>
-                      <tr>
-                        <td rowspan="2">Task</td>
-                        <td colspan="2">Time (milliseconds)</td>
-                      </tr>
-                      <tr>
-                        <th>Best-case</th>
-                        <th>Worst-case</th>
-                      </tr>
-                      <tr>
-                        <td>Phase-Vocoder</td>
-                        <td>77</td>
-                        <td>350</td>
-                      </tr>
-                      <tr>
-                        <td>Pre-processing</td>
-                        <td>210</td>
-                        <td>-</td>
-                      </tr>
-                    </table>
-                    <p>The FCNN with a depth of 10 layers and a total of 25, 156 parameters takes 248 μs to calculate its classification probability for one second of single-channel EEG. This inference time is tremendously reduced compared to neural networks running on microprocessors. The parallel operation of the neural network accelerator allows the Arm Cortex-M4 processor to take on more computationally intensive tasks without failing the real-time requirements.</p>
+                    <p>The Real-time AI-assited Algorithm was implemented on <a href="https://www.analog.com/en/products/max78002.html">MAX78002</a>, a new breed of AI microcontrollers designed for running neural networks with ultra-low power consumption. It features an Arm Cortex-M4 with FPU CPU and an ultra-low-power deep neural network accelerator.</p>
+                    <p>The power consumptions of two neural networks on the MAX78002 were measured by tracking the input current of net VCOREA which drives the CNN core on the MAX78002. The voltage drop at jumper JP4 with a preinstalled 10mΩ shunt resister on the development kit was measured using a 500x amplifier and an oscilloscope. Fig 3 shows the current values derived from the measured voltage drop. With VCOREA is 1.1V, the total energy was also calculated.</p>
+                    <p>While Fig 3a1 and b1 detail the power signatures of two models in the sonification algorithm processing 8 channels EEG, a2 and b2 detail the power signatures processing a single input image. Three separated events marked in the figures are: CNN clock enabled, CNN starts, and CNN clock disabled. These events divide the total CNN operation period into two stages A and B. During stage A, first the accelerator is brought into a consistent state, next, kernels (weights) and biases are loaded, and finally the neural network’s architecture is configured. Stage B is when the input data being loaded, inference (peak), and output data being unloaded.</p>
+                    <img src="images/energy.png" alt="energy" style="width: 40%; margin-top: 15px;">
                     <h4>REFERENCES</h4>
-                    <p>[1]&nbsp;S. Gomez-Quintana, A. O’Shea, A. Factor, E. Popovici, and A. Temko, “A method for AI assisted human interpretation of neonatal EEG,” Sci Rep, vol. 12, no. 1, p. 10932, 2022, doi: 10.1038/s41598-022-14894-4.<br>[2]&nbsp;N. Stevenson, K. Tapani, L. Lauronen, and S. Vanhatalo, “A dataset of neonatal EEG recordings with seizures annotations,” Jun. 2018, doi: 10.5281/ZENODO.2547147.</p>
+                    <p>[1]&nbsp;S. Gomez-Quintana, A. O’Shea, A. Factor, E. Popovici, and A. Temko, “A method for AI assisted human interpretation of neonatal EEG,” Sci Rep, vol. 12, no. 1, p. 10932, 2022, doi: 10.1038/s41598-022-14894-4.
+                      <br>[2]&nbsp;N. Stevenson, K. Tapani, L. Lauronen, and S. Vanhatalo, “A dataset of neonatal EEG recordings with seizures annotations,” Jun. 2018, doi: 10.5281/ZENODO.2547147.
+                      <br>[3]&nbsp;A. O’Shea, G. Lightbody, G. Boylan, and A. Temko, “Neonatal seizure detection from raw multi-channel EEG using a fully convolutional architecture,” Neural Networks, vol. 123, 2020, doi: 10.1016/j.neunet.2019.11.023.
+                      <br>[4]&nbsp;A. Daly, A. O’Shea, G. Lightbody, and A. Temko, “Towards Deeper Neural Networks for Neonatal Seizure Detection,” in 2021 43rd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC), 2021, pp. 920–923. doi: 10.1109/EMBC46164.2021.9629485.
+                    </p>
                   </div>
             </div>
             <div class="cvsection">
