@@ -148,8 +148,8 @@
                     <h4>Neural Networks Quantization and Validation</h4>
                     <p>Two patient-independent seizure detection neural networks were implemented in this low-power application and compared in performance: A Fully Convolutional Neural Network (FCNN) contains three feature extraction blocks and a fully convolutional classification block, referred to as the VGGNet in this study [3]; and an improved Residual Network (ResNet) with total of 13 convolution layers in 4 feature extraction blocks [4].</p>
                     <p>Table I summarizes the performances of the ResNet and the VGGNet in both floating-point and integer formats. The ResNet model outperforms the VGGNet model in both floating-point and 8bit integers representations by 2.6% and 3% respectively.</p>
-                    <table>
-                      <caption>TABLE I. 	Post Quantization Performance</caption>
+                    <table style="text-align: center;">
+                      <caption>TABLE I. 	NEURAL NETWORKS PERFORMANCES</caption>
                       <tr>
                         <th>Model</th>
                         <th>Number of Parameters</th>
@@ -190,7 +190,8 @@
                     <p>The Real-time AI-assited Algorithm was implemented on <a href="https://www.analog.com/en/products/max78002.html">MAX78002</a>, a new breed of AI microcontrollers designed for running neural networks with ultra-low power consumption. It features an Arm Cortex-M4 with FPU CPU and an ultra-low-power deep neural network accelerator.</p>
                     <p>The power consumptions of two neural networks on the MAX78002 were measured by tracking the input current of net VCOREA which drives the CNN core on the MAX78002. The voltage drop at jumper JP4 with a preinstalled 10mΩ shunt resister on the development kit was measured using a 500x amplifier and an oscilloscope. Fig 3 shows the current values derived from the measured voltage drop. With VCOREA is 1.1V, the total energy was also calculated.</p>
                     <p>While Fig 3a1 and b1 detail the power signatures of two models in the sonification algorithm processing 8 channels EEG, a2 and b2 detail the power signatures processing a single input image. Three separated events marked in the figures are: CNN clock enabled, CNN starts, and CNN clock disabled. These events divide the total CNN operation period into two stages A and B. During stage A, first the accelerator is brought into a consistent state, next, kernels (weights) and biases are loaded, and finally the neural network’s architecture is configured. Stage B is when the input data being loaded, inference (peak), and output data being unloaded.</p>
-                    <img src="images/energy.png" alt="energy" style="width: 40%; margin-top: 15px;">
+                    <img src="images/energy.png" alt="energy" style="width: 80%; margin-top: 15px;">
+                    <p style="text-align: center;">Fig. 3.	Neural Networks’ Power Signatures on MAX78002</p>
                     <h4>REFERENCES</h4>
                     <p>[1]&nbsp;S. Gomez-Quintana, A. O’Shea, A. Factor, E. Popovici, and A. Temko, “A method for AI assisted human interpretation of neonatal EEG,” Sci Rep, vol. 12, no. 1, p. 10932, 2022, doi: 10.1038/s41598-022-14894-4.
                       <br>[2]&nbsp;N. Stevenson, K. Tapani, L. Lauronen, and S. Vanhatalo, “A dataset of neonatal EEG recordings with seizures annotations,” Jun. 2018, doi: 10.5281/ZENODO.2547147.
