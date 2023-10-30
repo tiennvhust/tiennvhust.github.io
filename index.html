@@ -103,7 +103,7 @@
                     <ol>
                         <b><li>Actuator Control Software</li></b>
                         <div class="video-container">
-                          <div class="video-box">
+                          <div class="text-box">
                             <p>I designed and developed a software to control BLDC motor drivers, which control the robot wheels. Control and query commands are sent to motor driver via an UART communication port. The main language used was C/C++ with Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/bldc_driver">here</a></p>
                           </div>
                           <div class="video-box">
@@ -115,7 +115,7 @@
                         </div>
                         <b><li>Graphical User Interface</li></b>
                         <div class="video-container">
-                          <div class="video-box">
+                          <div class="text-box">
                             <p>I designed and developed robot Graphical User Interface (GUI) using Qt Creator software. This GUI allows users to control the movement of the robot via a software joystick, displays robot's data and status. The main language used was C/C++ with Qt Creator and Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/vk_omni_gui">here</a></p>
                           </div>
                           <div class="video-box">
@@ -142,30 +142,31 @@
                     <ol>
                         <b><li>Original AI-assited Sonification Algorithm</li></b>
                         <div class="video-container">
-                          <div class="video-box">
+                          <div class="text-box">
                             <p>A novel method of AI-driven spatial neonatal EEG sonification has been presented in [1]. It utilizes the Phase Vocoder (PV) algorithm with an AI-guided time-compression factor as an attention mechanism. The AI probabilities are used to modulate the audio playback speed, maintaining focus on the EEG regions with a high probability of seizures, while allowing quick audio rendering over non-seizure EEG segments. This method combines the accuracy and speed of AI algorithms with the interpretability and intuitiveness of sonification, it enables a quick, accurate, and interpretable seizure detection method while requiring little to no training from medical workers.</p>
                           </div>
                           <div class="video-box">
-                            <img src="../images/original.gif" style="width:400px;">
+                            <img src="../images/original.gif" style="max-width:500px;">
                           </div>
                         </div>
                         <b><li>Real-Time Adaptation</li></b>
                         <div class="video-container">
-                          <div class="video-box">
+                          <div class="text-box">
                             <p>This study presents a real-time adaptation of the AI-assisted EEG sonification algorithm and its implementation on an ultra-low power embedded system. A significant advantage of a real-time implementation is that the output audio is always available for listening. Medical workers can have access to real-time audio at any time without having to periodically restart the sonification algorithm, enabling seizure detection as soon as they occur. This ultra-low-power implementation is suitable for wearable devices, which can be widely adopted in clinical settings, including Intensive Care Units, for continuous neonatal EEG monitoring.</p>
                           </div>
                           <div class="video-box">
-                            <img src="../images/realtime.gif" style="width:400px;">
+                            <img src="../images/realtime.gif" style="max-width:500px;">
                           </div>
                         </div>
                     </ol>
                     <h4>Listen to EEG</h4>
                     <p>The real-time (online) algorithm implemented with C/C++ is validated against the original design which implemented on Matlab. This website provideds a more interactive comparision between the two algorithm designs: <a href="https://tiennvhust.github.io/listen2eeg.github.io">Listen to EEG</a></p>
                     <h4>Neural Networks Quantization and Validation</h4>
-                    <p>Two patient-independent seizure detection neural networks were implemented in this low-power application and compared in performance: A Fully Convolutional Neural Network (FCNN) contains three feature extraction blocks and a fully convolutional classification block, referred to as the VGGNet in this study [3]; and an improved Residual Network (ResNet) with total of 13 convolution layers in 4 feature extraction blocks [4].</p>
+                    <p>Two patient-independent seizure detection neural networks were implemented in this low-power application and compared in performance: A Fully Convolutional Neural Network (FCNN) contains three feature extraction blocks and a fully convolutional classification block, referred to as the VGGNet in this study [2]; and an improved Residual Network (ResNet) with total of 13 convolution layers in 4 feature extraction blocks [3].</p>
+                    <p>A publicly available dataset of seizure annotated neonatal EEG collected at Helsinki University Hospital was used in this study [4]. This dataset, containing multi-channel EEG recordings from 79 term neonates with the median duration of 74 min, were distributed into five folds of similar total length (range: 21.9 to 22.8 hours) and similar seizure percentage (range: 9.5% to 10%) for cross-validation.</p>
                     <p>Table I summarizes the performances of the ResNet and the VGGNet in both floating-point and integer formats. The ResNet model outperforms the VGGNet model in both floating-point and 8bit integers representations by 2.6% and 3% respectively.</p>
-                    <table style="text-align: center;">
-                      <caption>TABLE I. 	NEURAL NETWORKS PERFORMANCES</caption>
+                    <table style="font-size: 14px; margin-top: 15px;">
+                      <caption>Table I. 	Neural Networks Performances</caption>
                       <tr>
                         <th>Model</th>
                         <th>Number of Parameters</th>
@@ -210,9 +211,9 @@
                     <p style="text-align: center;">Fig. 3.	Neural Networks’ Power Signatures on MAX78002</p>
                     <h4>REFERENCES</h4>
                     <p>[1]&nbsp;S. Gomez-Quintana, A. O’Shea, A. Factor, E. Popovici, and A. Temko, “A method for AI assisted human interpretation of neonatal EEG,” Sci Rep, vol. 12, no. 1, p. 10932, 2022, doi: 10.1038/s41598-022-14894-4.
-                      <br>[2]&nbsp;N. Stevenson, K. Tapani, L. Lauronen, and S. Vanhatalo, “A dataset of neonatal EEG recordings with seizures annotations,” Jun. 2018, doi: 10.5281/ZENODO.2547147.
-                      <br>[3]&nbsp;A. O’Shea, G. Lightbody, G. Boylan, and A. Temko, “Neonatal seizure detection from raw multi-channel EEG using a fully convolutional architecture,” Neural Networks, vol. 123, 2020, doi: 10.1016/j.neunet.2019.11.023.
-                      <br>[4]&nbsp;A. Daly, A. O’Shea, G. Lightbody, and A. Temko, “Towards Deeper Neural Networks for Neonatal Seizure Detection,” in 2021 43rd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC), 2021, pp. 920–923. doi: 10.1109/EMBC46164.2021.9629485.
+                      <br>[2]&nbsp;A. O’Shea, G. Lightbody, G. Boylan, and A. Temko, “Neonatal seizure detection from raw multi-channel EEG using a fully convolutional architecture,” Neural Networks, vol. 123, 2020, doi: 10.1016/j.neunet.2019.11.023.
+                      <br>[3]&nbsp;A. Daly, A. O’Shea, G. Lightbody, and A. Temko, “Towards Deeper Neural Networks for Neonatal Seizure Detection,” in 2021 43rd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC), 2021, pp. 920–923. doi: 10.1109/EMBC46164.2021.9629485.
+                      <br>[4]&nbsp;N. Stevenson, K. Tapani, L. Lauronen, and S. Vanhatalo, “A dataset of neonatal EEG recordings with seizures annotations,” Jun. 2018, doi: 10.5281/ZENODO.2547147.
                     </p>
                   </div>
             </div>
