@@ -66,15 +66,22 @@ body{
 
 .cvsection h2 {
     font-size: 30px;
+    margin-top: 50px;
 }
 
 .cvsection h3 {
     color: steelblue;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
-.cvsection p {
+.cvsection h4 {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+.cvsection p, ul {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-top: 5px;
 }
