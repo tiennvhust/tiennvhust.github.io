@@ -1,7 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --new-black: #080808;
+    --black\<deleted\|variable-8551cbdc\>: black;
+    --google-blue: #4285F4;
+    --webflow-blue: #146ef5;
+    --webflow-blue\<deleted\|variable-59132acb\>: #4353ff;
+    --white: white;
+    --white-smoke\<deleted\|variable-3c2ffb2d\>: #eff0f3;
+    --blue-600: #0055d4;
+    --gray-800: #222;
+    --blue-400: #3b89ff;
+    --gray-500: #757575;
+    --gray-300: #ababab;
+    --gray-100: #f0f0f0;
+    --gray-400: #898989;
+    --gray-600: #5a5a5a;
+    --gray-200: #d8d8d8;
+    --gray-900: #171717;
+    --gray-700: #363636;
+    --yellow: #ffae13;
+    --red: #ee1d36;
+    --orange: #ff6b00;
+    --green: #00d722;
+    --purple: #7a3dff;
+    --pink: #ed52cb;
+}
+
 html,
 body{
-    font-family: 'Raleway', san-serif;
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    color: var(--new-black);
     margin: 0;
 }
 
@@ -44,7 +73,13 @@ body{
     width: 80%;
     padding: 20px;
     text-align: center;
-  }
+}
+
+.bg-text p {
+    /* font-family: 'Inter', sans-serif; */
+    font-weight: 300;
+    font-style: italic;
+}
 
 .contact {
     display: flex;
@@ -70,12 +105,13 @@ body{
 }
 
 .cvsection h3 {
-    color: steelblue;
+    color: var(--google-blue);
     font-size: 20px;
     margin-bottom: 0px;
 }
 
 .cvsection h4 {
+    color: var(--gray-600);
     font-size: 14px;
     margin-bottom: 0px;
 }
