@@ -1,19 +1,16 @@
 #navbar {
   /* 1. VISUALS */
-  background-color: #1a1a1a;
+  background-color: #9B1B30;
   height: 40px;
-  border-bottom: 1px solid #333;
+  /* border-bottom: 1px solid #2B2826; */
   /* 2. POSITIONING */
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 100;
-  /* 3. LAYOUT (Replaces float) */
   display: flex;
   align-items: center;
-  /* Vertically centers text */
   padding-left: 25px;
-  /* Aligns with your content padding */
   box-sizing: border-box;
 }
 
@@ -21,12 +18,12 @@
 #navbar a {
   /* Remove 'float: left' - Flexbox handles this now */
   display: block;
-  color: #cccccc;
+  color: #2B2826;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 5px;
   /* Horizontal spacing only */
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   transition: color 0.3s ease;
 }

@@ -50,7 +50,7 @@
     /* margin-top: 10px; */
     border-radius: 15px;
     background-color: white;
-    color: black;
+    color: #2B2826;
     border: 1px solid white;
     transition: all 0.3s ease;
 }
@@ -220,10 +220,10 @@ body {
 /* --- NEW ABOUT SECTION STYLES --- */
 #About {
     /* ... your existing colors ... */
-    background-color: #1a1a1a;
+    background-color: #9B1B30;
     /* IMPORTANT: Ensure no margin at the top */
     margin-top: 0;
-    /* Subtract the navbar height (60px) so it fits on one screen */
+    /* Subtract the navbar height (40px) so it fits on one screen */
     min-height: calc(100vh - 40px);
     /* ... rest of your flex settings ... */
     display: flex;
@@ -244,7 +244,7 @@ body {
 }
 
 .about-content p {
-    color: #cccccc;
+    color: #2B2826;
     /* Light gray text for contrast */
     font-size: 1.0rem;
     font-style: italic;
