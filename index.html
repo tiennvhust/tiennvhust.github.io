@@ -1,277 +1,264 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tien V Nguyen</title>
-    <link rel="stylesheet" href="style/navstyle.css">
-    <link rel="stylesheet" href="style/textstyle.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLJX3G8587"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-JLJX3G8587');
-    </script>
-  </head>
-  <body>
-        <div id="navbar">
-            <a href="#About">About</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Contact">Contact</a>
+<head>
+  <title>Tien V Nguyen</title>
+  <link rel="stylesheet" href="style/navstyle.css">
+  <link rel="stylesheet" href="style/textstyle.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLJX3G8587"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JLJX3G8587');
+  </script>
+</head>
+
+<body>
+  <div class="split-wrapper">
+    <div class="chat-pane">
+      <iframe src="https://tienschatbot.streamlit.app/?embed=true" title="Chatbot"></iframe>
+    </div>
+    <div class="content-pane">
+      <div id="navbar">
+        <a href="#About">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
+      </div>
+      <div id="About">
+        <div class="about-content">
+          <h1>Tien Van Nguyen</h1>
+          <p>"A systems software engineer expertised in sensor systems, signal processing,
+            machine learning, and robotics."</p>
+          <a href="../files/tienn_cv.pdf" download="tienn_cv.pdf">
+            <button class="downloadbtn"><i class="fa fa-cloud-download"></i> PDF</button>
+          </a>
         </div>
-        <div id="About">
-            <div class="bg-image"></div>
-            <div class="bg-text">
-                <h1>Tien Van Nguyen</h1>
-                <p>"I am a system software engineer with three years of experience in sensor systems, signal processing, machine learning, and robotics."</p>
-                <a href="../files/tienn_cv.pdf" download="tienn_cv.pdf"><button class="downloadbtn"><i class="fa fa-download"></i> Download CV</button></a>
-            </div>
+      </div>
+      <div class="main">
+        <div class="cvsection">
+          <h2>Education</h2>
+          <h3>University College Cork</h3>
+          <p style="text-align:left;">
+            Cork, Ireland
+            <span style="float:right;">
+              May 2022 - May 2024
+            </span>
+          </p>
+          <h4>MSc - Electrical and Electronics Engineering</h4>
+          <p>Graduated with First Class Honour</p>
+          <h3>Technical University of Munich</h3>
+          <p style="text-align:left;">
+            Munich, Germany
+            <span style="float:right;">
+              Oct 2019 - Apr 2020
+            </span>
+          </p>
+          <h4>Exchange Student</h4>
+          <h3>Hanoi University of Science and Technology</h3>
+          <p style="text-align:left;">
+            Hanoi, Vietnam
+            <span style="float:right;">
+              Oct 2015 - Aug 2020
+            </span>
+          </p>
+          <h4>Engineer - Control Engineering and Automation</h4>
+          <p>Graduated with GPA 3.37/4.0</p>
         </div>
-        <div class="main">
-            <!-- EDUCATION -->
-            <div class="cvsection">
-                <h2>Education</h2>
-                <!-- UCC -->
-                <h3>University College Cork</h3>
-                <p style="text-align:left;">
-                    Cork, Ireland
-                    <span style="float:right;">
-                        May 2022 - May 2024
-                    </span>
-                </p>
-                <h4>MSc by Research - Electrical and Electronics Engineering</h4>
-                <p>Graduated with First Class Honour</p>
-                <!-- TUM -->
-                <h3>Technical University of Munich</h3>
-                <p style="text-align:left;">
-                    Munich, Germany
-                    <span style="float:right;">
-                        Oct 2019 - Apr 2020
-                    </span>
-                </p>
-                <h4>Exchange Student</h4>
-                <!-- HUST -->
-                <h3>Hanoi University of Science and Technology</h3>
-                <p style="text-align:left;">
-                    Hanoi, Vietnam
-                    <span style="float:right;">
-                        Oct 2015 - Aug 2020
-                    </span>
-                </p>
-                <h4>Engineer - Control Engineering and Automation</h4>
-                <p>Graduated with GPA 3.37/4.0</p>
-            </div>
-            <!-- EXPERIENCE -->
-            <div class="cvsection">
-                <h2>Work Experience</h2>
-                <!-- Qualcomm -->
-                <h3>Qualcomm Technologies</h3>
-                <p style="text-align:left;">
-                    Cork, Ireland
-                    <span style="float:right;">
-                        May 2024 - Current
-                    </span>
-                </p>
-                <h4>System Engineer - Sensor</h4>
-                <p>
-                  Develop machine learning and signal processing solutions for sensors on mobile and low-power platforms.
-                  <ul style="line-height:180%">
-                    <li>Tools and Libraries: <a href="https://aihub.qualcomm.com" style="color: blue; text-decoration: underline;">Qualcomm AI Hub</a>, <a href="https://docs.qualcomm.com/bundle/publicresource/topics/80-63442-50/introduction.html" style="color: blue; text-decoration: underline;">Qualcomm® AI Engine Direct</a>.</li>
-                    <li>Programing Languages: C, C++, Python, Matlab.</li>
-                  </ul>
-                </p>
-                <h3>Vietnam-Korea Institute of Science and Technology</h3>
-                <p style="text-align:left;">
-                    Hanoi, Vietnam
-                    <span style="float:right;">
-                        Aug 2021 - Apr 2022
-                    </span>
-                </p>
-                <h4>Research Engineer</h4>
-                <p>
-                  Developed an omnidirectional robot prototype for SLAM (simultaneous localization and mapping) study.
-                  <ul style="line-height:180%">
-                    <li>Tools and Libraries: Robot Operating System (ROS), Qt.</li>
-                    <li>Programing Languages: C, C++, Python.</li>
-                  </ul>
-                </p>
-                <!-- VIETTELTECH -->
-                <!-- VKIST -->
-                <h3>Viettel High Technology Industries Corporation</h3>
-                <p style="text-align:left;">
-                    Hanoi, Vietnam
-                    <span style="float:right;">
-                        Nov 2020 - Aug 2021
-                    </span>
-                </p>
-                <h4>Embedded Software Engineer</h4>
-                <p>
-                  Bare-metal Linux Embedded Systems bring-up, Linux Kernel Device Drivers developing.
-                  <ul style="line-height:180%">
-                    <li>Tools and Libraries: Linux Kernel, Das U-boot.</li>
-                    <li>Programing Languages: C, C++.</li>
-                  </ul>
-                </p>
-            </div>
-            <div class="cvsection" id="Projects">
-                <h2>Projects</h2>
-                <!-- Project 1 -->
-                <h4>2021</h4>
-                <h3 class="collapsible">Omnidirectional Robot Prototype Development</h3>
-                <div id="project1">
-                    <h4>DESCRIPTION</h4>
-                    <p>Developing an omnidirectional robot prototype for research and development of a navigation system for field robots.</p>
-                    <h4>CONTRIBUTIONS</h4>
-                    <p>I designed the electrical system, safety management system, actuator control software, and graphical user interface.</p>
-                    <ol>
-                        <b><li>Actuator Control Software</li></b>
-                        <div class="video-container">
-                          <div class="text-box">
-                            <p>I designed and developed a software to control BLDC motor drivers, which control the robot wheels. Control and query commands are sent to motor driver via an UART communication port. The main language used was C/C++ with Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/bldc_driver">here</a></p>
-                          </div>
-                          <div class="video-box">
-                            <video controls>
-                              <source src="../videos/1683561766185.MP4" type="video/mp4">
-                              Your browser does not support the video tag.
-                            </video>
-                          </div>
-                        </div>
-                        <b><li>Graphical User Interface</li></b>
-                        <div class="video-container">
-                          <div class="text-box">
-                            <p>I designed and developed robot Graphical User Interface (GUI) using Qt Creator software. This GUI allows users to control the movement of the robot via a software joystick, displays robot's data and status. The main language used was C/C++ with Qt Creator and Robot Operating System (ROS).<br>Source code: <a href="https://github.com/tiennvhust/vk_omni_gui">here</a></p>
-                          </div>
-                          <div class="video-box">
-                            <video controls>
-                              <source src="https://user-images.githubusercontent.com/95061513/160900081-84f24e7f-518d-42c9-aed3-01580d267aa2.mp4" type="video/mp4">
-                              Your browser does not support the video tag.
-                            </video>
-                          </div>
-                        </div>
-                        <b><li>Safety Management System</li></b>
-                        <p>I designed a safety mechanism using a PLC and software to control the operation of the robot. The development of this system involving PLC programing and C/C++ with ROS.<br>Source code: <a href="https://github.com/tiennvhust/vk_omni_plc">here</a></p>
-                    </ol>
-                  </div>
-                  <!-- Project 2 -->
-                  <h4>2023</h4>
-                  <h3 class="collapsible">Real-time, AI-assisted Sonification Algorithm for Neonatal EEG</h3>
-                  <div id="project2">
-                    <h4>DESCRIPTION</h4>
-                    <p>
-                      This study presents a real-time processing design of the AI-assisted EEG sonification algorithm in [16] and its implementation on an ultra-low power microcontroller. Two patient-independent seizure detection neural networks were evaluated for their performance and power consumption on the microcontroller’s dedicated neural network accelerator. The real-time design allows for continuous availability of audio, saving time and effort for medical staff and enabling seizure detection as early as it occurs. The ultra-low power application can be used in clinical settings, such as Neonatal Intensive Care Units, for continuous EEG analysis. It is suitable for wearable devices.
-                    </p>
-                    <p>
-                      The original algorithm had been re-designed in architecture along with some of its parts to process real-time data. The new architecture also needs to be high-speed and memory efficient, suitable for running on a resource-constrained platform. Taking advantage of a multithreading design, this architecture enables the processor to perform all digital signal processing tasks concurrently while retrieving the classification outputs of the seizure detection algorithm.
-                    </p>
-                    <ol>
-                        <b><li>Original AI-assited Sonification Algorithm</li></b>
-                        <div class="video-container">
-                          <div class="text-box">
-                            <p>A novel method of AI-driven spatial neonatal EEG sonification has been presented in [1]. It utilizes the Phase Vocoder (PV) algorithm with an AI-guided time-compression factor as an attention mechanism. The AI probabilities are used to modulate the audio playback speed, maintaining focus on the EEG regions with a high probability of seizures, while allowing quick audio rendering over non-seizure EEG segments. This method combines the accuracy and speed of AI algorithms with the interpretability and intuitiveness of sonification, it enables a quick, accurate, and interpretable seizure detection method while requiring little to no training from medical workers.</p>
-                          </div>
-                          <div class="video-box">
-                            <img src="../images/original.gif" style="max-width:500px;">
-                          </div>
-                        </div>
-                        <b><li>Real-Time Adaptation</li></b>
-                        <div class="video-container">
-                          <div class="text-box">
-                            <p>This study presents a real-time adaptation of the AI-assisted EEG sonification algorithm and its implementation on an ultra-low power embedded system. A significant advantage of a real-time implementation is that the output audio is always available for listening. Medical workers can have access to real-time audio at any time without having to periodically restart the sonification algorithm, enabling seizure detection as soon as they occur. This ultra-low-power implementation is suitable for wearable devices, which can be widely adopted in clinical settings, including Intensive Care Units, for continuous neonatal EEG monitoring.</p>
-                          </div>
-                          <div class="video-box">
-                            <img src="../images/realtime.gif" style="max-width:500px;">
-                          </div>
-                        </div>
-                    </ol>
-                    <h4>Neural Networks Quantization and Validation</h4>
-                    <p>Two patient-independent seizure detection neural networks were implemented in this low-power application and compared in performance: A Fully Convolutional Neural Network (FCNN) contains three feature extraction blocks and a fully convolutional classification block, referred to as the VGGNet in this study [2]; and an improved Residual Network (ResNet) with total of 13 convolution layers in 4 feature extraction blocks [3].</p>
-                    <p>A publicly available dataset of seizure annotated neonatal EEG collected at Helsinki University Hospital was used in this study [4]. This dataset, containing multi-channel EEG recordings from 79 term neonates with the median duration of 74 min, were distributed into five folds of similar total length (range: 21.9 to 22.8 hours) and similar seizure percentage (range: 9.5% to 10%) for cross-validation.</p>
-                    <p>Table I summarizes the performances of the ResNet and the VGGNet in both floating-point and integer formats. The ResNet model outperforms the VGGNet model in both floating-point and 8bit integers representations by 2.6% and 3% respectively.</p>
-                    <table style="font-size: 14px; margin-top: 15px;">
-                      <caption>Table I. 	Neural Networks Performances</caption>
-                      <tr>
-                        <th>Model</th>
-                        <th>Number of Parameters</th>
-                        <th>Size (bytes)</th>
-                        <th>AUC (%)</th>
-                        <th>MAX78002 Inference Time (us)</th>
-                      </tr>
-                      <tr>
-                        <td>ResNet 32b</td>
-                        <td>45,090</td>
-                        <td>180,360</td>
-                        <td>98.0</td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>ResNet 8b</td>
-                        <td>45,090</td>
-                        <td>45,090</td>
-                        <td>97.6</td>
-                        <td>937</td>
-                      </tr>
-                      <tr>
-                        <td>VGG 32b</td>
-                        <td>25,538</td>
-                        <td>102,152</td>
-                        <td>95.4</td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>VGG 8b</td>
-                        <td>25,538</td>
-                        <td>25,538</td>
-                        <td>94.6</td>
-                        <td>248</td>
-                      </tr>
-                    </table>
-                    <h4>Implementation Results</h4>
-                    <p>The Real-time AI-assited Algorithm was implemented on <a href="https://www.analog.com/en/products/max78002.html">MAX78002</a>, a new breed of AI microcontrollers designed for running neural networks with ultra-low power consumption. It features an Arm Cortex-M4 with FPU CPU and an ultra-low-power deep neural network accelerator.</p>
-                    <p>The power consumptions of two neural networks on the MAX78002 were measured by tracking the input current of net VCOREA which drives the CNN core on the MAX78002. The voltage drop at jumper JP4 with a preinstalled 10mΩ shunt resister on the development kit was measured using a 500x amplifier and an oscilloscope. Fig 3 shows the current values derived from the measured voltage drop. With VCOREA is 1.1V, the total energy was also calculated.</p>
-                    <p>While Fig 3a1 and b1 detail the power signatures of two models in the sonification algorithm processing 8 channels EEG, a2 and b2 detail the power signatures processing a single input image. Three separated events marked in the figures are: CNN clock enabled, CNN starts, and CNN clock disabled. These events divide the total CNN operation period into two stages A and B. During stage A, first the accelerator is brought into a consistent state, next, kernels (weights) and biases are loaded, and finally the neural network’s architecture is configured. Stage B is when the input data being loaded, inference (peak), and output data being unloaded.</p>
-                    <img src="images/energy.png" alt="energy" style="width: 80%; margin-top: 15px;">
-                    <p style="text-align: center;">Fig. 3.	Neural Networks’ Power Signatures on MAX78002</p>
-                    <h4>REFERENCES</h4>
-                    <p>[1]&nbsp;S. Gomez-Quintana, A. O’Shea, A. Factor, E. Popovici, and A. Temko, “A method for AI assisted human interpretation of neonatal EEG,” Sci Rep, vol. 12, no. 1, p. 10932, 2022, doi: 10.1038/s41598-022-14894-4.
-                      <br>[2]&nbsp;A. O’Shea, G. Lightbody, G. Boylan, and A. Temko, “Neonatal seizure detection from raw multi-channel EEG using a fully convolutional architecture,” Neural Networks, vol. 123, 2020, doi: 10.1016/j.neunet.2019.11.023.
-                      <br>[3]&nbsp;A. Daly, A. O’Shea, G. Lightbody, and A. Temko, “Towards Deeper Neural Networks for Neonatal Seizure Detection,” in 2021 43rd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC), 2021, pp. 920–923. doi: 10.1109/EMBC46164.2021.9629485.
-                      <br>[4]&nbsp;N. Stevenson, K. Tapani, L. Lauronen, and S. Vanhatalo, “A dataset of neonatal EEG recordings with seizures annotations,” Jun. 2018, doi: 10.5281/ZENODO.2547147.
-                    </p>
-                  </div>
-            </div>
-            <div class="cvsection">
-                <h2>Publications</h2>
-                <p><span style="font-weight: bold;">T. Nguyen</span>, A. Daly, S. Gomez-Quintana, F. O'Sullivan, A. Temko and E. Popovici, "Low-Power Real-Time Seizure Monitoring Using AI-Assisted Sonification of Neonatal EEG," in IEEE Transactions on Emerging Topics in Computing, vol. 13, no. 1, pp. 80-89, Jan.-March 2025, doi: <a href="https://doi.org/10.1109/TETC.2024.3481035" style="color: blue; text-decoration: underline;">10.1109/TETC.2024.3481035</a>.</p>
-                <p><span style="font-weight: bold;">T. Van Nguyen</span>, A. Daly, F. O’Sullivan, S. G. Quintana, A. Temko and E. Popovici, "A real-time and ultra-low power implementation of an AI-assisted sonification algorithm for neonatal EEG," 2023 9th International Workshop on Advances in Sensors and Interfaces (IWASI), Monopoli (Bari), Italy, 2023, pp. 313-318, doi: <a href="https://doi.org/10.1109/IWASI58316.2023.10164463" style="color: blue; text-decoration: underline;">10.1109/IWASI58316.2023.10164463</a>.</p>
-            </div>
+        <div class="cvsection">
+          <h2>Work Experience</h2>
+          <h3>Qualcomm Technologies</h3>
+          <p style="text-align:left;">
+            Cork, Ireland
+            <span style="float:right;">
+              May 2024 - Current
+            </span>
+          </p>
+          <h4>System Engineer - Sensor</h4>
+          <p>
+            Develop machine learning and signal processing solutions for sensors on mobile and low-power platforms.
+          <ul style="line-height:180%">
+            <li>Tools and Libraries: <a href="https://aihub.qualcomm.com"
+                style="color: blue; text-decoration: underline;">Qualcomm AI Hub</a>, <a
+                href="https://docs.qualcomm.com/bundle/publicresource/topics/80-63442-50/introduction.html"
+                style="color: blue; text-decoration: underline;">Qualcomm® AI Engine Direct</a>.</li>
+            <li>Programing Languages: C, C++, Python, Matlab.</li>
+          </ul>
+          </p>
+          <h3>Vietnam-Korea Institute of Science and Technology (VKIST)</h3>
+          <p style="text-align:left;">
+            Hanoi, Vietnam
+            <span style="float:right;">
+              Aug 2021 - Apr 2022
+            </span>
+          </p>
+          <h4>Research Engineer</h4>
+          <p>
+            Developed an omnidirectional robot prototype for SLAM (simultaneous localization and mapping) study.
+          <ul style="line-height:180%">
+            <li>Tools and Libraries: Robot Operating System (ROS), Qt.</li>
+            <li>Programing Languages: C, C++, Python.</li>
+          </ul>
+          </p>
+          <h3>Viettel High Technology Industries Corporation</h3>
+          <p style="text-align:left;">
+            Hanoi, Vietnam
+            <span style="float:right;">
+              Nov 2020 - Aug 2021
+            </span>
+          </p>
+          <h4>Embedded Software Engineer</h4>
+          <p>
+            Bare-metal Linux Embedded Systems bring-up, Linux Kernel Device Drivers developing.
+          <ul style="line-height:180%">
+            <li>Tools and Libraries: Linux Kernel, Das U-boot.</li>
+            <li>Programing Languages: C, C++.</li>
+          </ul>
+          </p>
         </div>
-        <!-- <div class="background"> -->
-          <div class="contact" id="Contact">
-            <div class="contact-container">
-                  <div class="contact-box">
-                      <i class="fa fa-envelope" style="font-size:36px;color: #333;"></i>
-                      <p>nguyentien97.hust@gmail.com</p>
-                  </div>
-                  <div class="contact-box">
-                      <i class="fa fa-phone-square" style="font-size:36px;color: #333;"></i>
-                      <p>(+353)852593652</p>
-                  </div>
-                  <div class="contact-box">
-                      <i class="fa fa-linkedin-square" style="font-size:36px;color:#0A66C2;"></i>
-                      <p><a href="https://www.linkedin.com/in/tienvn">LinkedIn</a></p>
-                  </div>
-                  <div class="contact-box">
-                    <i class="fa fa-github" style="font-size:36px;color:black;"></i>
-                    <p><a href="https://github.com/tiennvhust">Github</a></p>
+        <div class="cvsection" id="Projects">
+          <h2>Projects</h2>
+          <h4 align="right">2025</h4>
+          <p>Weekend Projects:</p>
+          <p class="collapsible">RAG-Based Profile Assistant</p>
+          <div id="project3">
+            <h4>DESCRIPTION</h4>
+            <p>Built a domain-specific chatbot using Llama 3 and Sentence-Transformers to answer recruiter queries with high precision.</p>
+            <h4>CONTRIBUTIONS</h4>
+            <p>Hybrid Retrieval Architecture: Engineered a custom retrieval engine combining semantic vector search (Cosine Similarity) with keyword filtering to retrieve relevant context from a flattened "Atomic Fact" JSON dataset.</p>
+            <p>Hallucination Prevention: Designed a deterministic "Fact Injection" pipeline that pre-calculates quantitative metrics (e.g., years of experience) in Python, ensuring 100% numerical accuracy in LLM responses.</p>
+            <p>Semantic Guardrails: Implemented a local intent classification router (BERT-based) to filter out-of-scope queries client-side, reducing external API costs and latency.</p>
+          </div>
+          <h4 align="right">2023</h4>
+          <p>Master's Thesis:</p>
+          <p class="collapsible">Low-Power & Real-Time Seizure Monitoring Using AI-Assisted Sonification of Neonatal
+            EEG
+          </p>
+          <div id="project2">
+            <h4>DESCRIPTION</h4>
+            <p>This study aims to develop a practical application to assist in EEG diagnostic procedures based on a
+              previous work. We target a battery-powered and inexpensive system that can be widely accessible in
+              underdeveloped regions where neonates are the most vulnerable due to the scarcity of expertise and
+              equipment.</p>
+            <p>A real-time processing design was presented as a part of this work, allowing the sonification algorithm to
+              operate and synthesize audio in parallel with EEG acquisition. The new design contains essential
+              modifications without affecting its consistency with the original study. This approach removes the need
+              for human intervention in the process and thus provides better accessibility for medical workers.</p>
+            <p>Bringing artificial intelligence to the far edge is another step toward realizing the targeted
+              application. The effects of full integer quantization on neural networks were studied. Although the
+              conversion into integer representations results in a slight accuracy loss, it significantly improves the
+              inference speed, memory footprint, power consumption, and hardware adaptability of deep learning models.</p>
+            <p>An implementation of the proposed system was presented using a low-power and AI-capable microcontroller.
+              Its speed and energy consumption are linearly correlated with the number of input EEG channels. This
+              real-time EEG analysis assisting system can process up to 55 parallel channels while being powered by a
+              small battery.</p>
+            <h4>ALGORITHM DESIGN</h4>
+            <img src="../images/design.png" alt="Real-Time Algorithm Design" width="60%">
+            <p class="image-caption">Figure 1: Real-Time Algorithm Design</p>
+            <p>Parallelization is a crucial technique to reduce overall computation time and enable more efficient
+              processing. Figure 1 presents a multi-threading design for the AI-assisted sonification algorithm where
+              its tasks are set up for concurrent and real-time operation.</p>
+            <h4>IMPLEMENTATION RESULTS</h4>
+            <img src="../images/power.png" alt="Power consumption" width="60%">
+            <p class="image-caption">Figure 2: Power Consumption by Number of Processing Channels.</p>
+            <p>Figure 2 shows the measurement results in error bars with lower and upper limits corresponding to best and
+              worst case scenarios, respectively. Overall, the power consumption of the algorithm has a linear
+              correlation with the number of operating EEG channels.</p>
+          </div>
+          <h4 align="right">2021</h4>
+          <p>VKIST - Research and Development Projects:</p>
+          <p class="collapsible">Omnidirectional Robot Prototype Development</p>
+          <div id="project1">
+            <h4>DESCRIPTION</h4>
+            <p>Developing an omnidirectional robot prototype for research and development of a navigation system for
+              field robots.</p>
+            <h4>CONTRIBUTIONS</h4>
+            <p>I designed the electrical system, safety management system, actuator control software, and graphical user
+              interface.</p>
+            <ol>
+              <b>
+                <li>Actuator Control Software</li>
+              </b>
+              <div class="video-container">
+                <div class="text-box">
+                  <p>I designed and developed a software to control BLDC motor drivers, which control the robot wheels.
+                    Control and query commands are sent to motor driver via an UART communication port. The main
+                    language used was C/C++ with Robot Operating System (ROS).<br>Source code: <a
+                      href="https://github.com/tiennvhust/bldc_driver">here</a></p>
                 </div>
-            </div>
+                <div class="video-box">
+                  <video controls>
+                    <source src="../videos/1683561766185.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+              <b>
+                <li>Graphical User Interface</li>
+              </b>
+              <div class="video-container">
+                <div class="text-box">
+                  <p>I designed and developed robot Graphical User Interface (GUI) using Qt Creator software. This GUI
+                    allows users to control the movement of the robot via a software joystick, displays robot's data and
+                    status. The main language used was C/C++ with Qt Creator and Robot Operating System (ROS).<br>Source
+                    code: <a href="https://github.com/tiennvhust/vk_omni_gui">here</a></p>
+                </div>
+                <div class="video-box">
+                  <video controls>
+                    <source
+                      src="https://user-images.githubusercontent.com/95061513/160900081-84f24e7f-518d-42c9-aed3-01580d267aa2.mp4"
+                      type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+              <b>
+                <li>Safety Management System</li>
+              </b>
+              <p>I designed a safety mechanism using a PLC and software to control the operation of the robot. The
+                development of this system involving PLC programing and C/C++ with ROS.<br>Source code: <a
+                  href="https://github.com/tiennvhust/vk_omni_plc">here</a></p>
+            </ol>
+          </div>
         </div>
-        <!-- </div> -->
-        <script src="scripts/script.js"></script>
-        <script src="scripts/navscript.js"></script>
-  </body>
+        <div class="cvsection">
+          <h2>Publications</h2>
+          <p><span style="font-weight: bold;">T. Nguyen</span>, A. Daly, S. Gomez-Quintana, F. O'Sullivan, A. Temko and
+            E. Popovici, "Low-Power Real-Time Seizure Monitoring Using AI-Assisted Sonification of Neonatal EEG," in
+            IEEE Transactions on Emerging Topics in Computing, vol. 13, no. 1, pp. 80-89, Jan.-March 2025, doi: <a
+              href="https://doi.org/10.1109/TETC.2024.3481035"
+              style="color: blue; text-decoration: underline;">10.1109/TETC.2024.3481035</a>.</p>
+          <p><span style="font-weight: bold;">T. Van Nguyen</span>, A. Daly, F. O’Sullivan, S. G. Quintana, A. Temko and
+            E. Popovici, "A real-time and ultra-low power implementation of an AI-assisted sonification algorithm for
+            neonatal EEG," 2023 9th International Workshop on Advances in Sensors and Interfaces (IWASI), Monopoli
+            (Bari), Italy, 2023, pp. 313-318, doi: <a href="https://doi.org/10.1109/IWASI58316.2023.10164463"
+              style="color: blue; text-decoration: underline;">10.1109/IWASI58316.2023.10164463</a>.</p>
+        </div>
+      </div>
+      <div class="contact" id="Contact">
+        <div class="contact-container">
+          <div class="contact-box">
+            <i class="fa fa-envelope" style="font-size:36px;color: #333;"></i>
+            <p>nguyentien97.hust@gmail.com</p>
+          </div>
+          <div class="contact-box">
+            <i class="fa fa-linkedin-square" style="font-size:36px;color:#0A66C2;"></i>
+            <p><a href="https://www.linkedin.com/in/tienvn">LinkedIn</a></p>
+          </div>
+          <div class="contact-box">
+            <i class="fa fa-github" style="font-size:36px;color:black;"></i>
+            <p><a href="https://github.com/tiennvhust">Github</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/navscript.js"></script>
+</body>
+
 </html>

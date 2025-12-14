@@ -41,46 +41,6 @@ body{
     flex-direction: column;
 }
 
-.bg-image {
-    /* The image used */
-    background-image: url("../images/IMG_0522.jpg");
-
-    /* Add the blur effect */
-    /* filter: blur(4px);
-    -webkit-filter: blur(4px); */
-    font-size:0;
-    line-height:0;
-
-    /* Full height */
-    height: 100vh;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-}
-
-.bg-text p {
-    /* font-family: 'Inter', sans-serif; */
-    font-weight: 300;
-    font-style: italic;
-}
-
 .contact {
     display: flex;
     height: 100vh;
