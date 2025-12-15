@@ -1,8 +1,7 @@
 #navbar {
   /* 1. VISUALS */
-  background-color: #9B1B30;
+  background-color: #2B2826;
   height: 40px;
-  /* border-bottom: 1px solid #2B2826; */
   /* 2. POSITIONING */
   position: sticky;
   top: 0;
@@ -18,7 +17,7 @@
 #navbar a {
   /* Remove 'float: left' - Flexbox handles this now */
   display: block;
-  color: #2B2826;
+  color: #9B1B30;
   text-align: center;
   padding: 0 5px;
   /* Horizontal spacing only */
