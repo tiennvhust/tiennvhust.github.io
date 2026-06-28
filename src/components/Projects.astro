@@ -1,0 +1,152 @@
+---
+import { projects } from '../data/resume';
+---
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title reveal">Projects</h2>
+    <div class="projects">
+      {
+        projects.map((project, i) => (
+          <details class="project reveal" open={i === 0}>
+            <summary>
+              <div class="p-summary">
+                <span class="p-year">{project.year}</span>
+                <div>
+                  {project.kicker && <span class="p-kicker">{project.kicker}</span>}
+                  <h3>{project.title}</h3>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down p-chevron" aria-hidden="true" />
+            </summary>
+            <div class="p-content">
+              {project.blocks.map((block) => (
+                <div class="p-block">
+                  <h4>{block.heading}</h4>
+                  {block.paragraphs?.map((p) => <p set:html={p} />)}
+                  {block.media?.map((m) =>
+                    m.type === 'image' ? (
+                      <figure>
+                        <img src={m.src} alt={m.caption ?? block.heading} loading="lazy" />
+                        {m.caption && <figcaption>{m.caption}</figcaption>}
+                      </figure>
+                    ) : (
+                      <figure>
+                        {/* eslint-disable-next-line */}
+                        <video controls preload="metadata" src={m.src} />
+                        {m.caption && <figcaption>{m.caption}</figcaption>}
+                      </figure>
+                    )
+                  )}
+                </div>
+              ))}
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .project {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.25s var(--ease);
+  }
+  .project[open] { border-color: var(--border-strong); }
+  .project:hover { border-color: var(--border-strong); }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+
+  .p-summary {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .p-year {
+    font-variant-numeric: tabular-nums;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--maroon-bright);
+    background: var(--maroon-soft);
+    padding: 0.35rem 0.7rem;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+  .p-kicker {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+    margin-bottom: 0.2rem;
+  }
+  .p-summary h3 {
+    margin: 0;
+    font-size: 1.12rem;
+    color: var(--text);
+  }
+  .p-chevron {
+    color: var(--text-faint);
+    transition: transform 0.3s var(--ease);
+    flex-shrink: 0;
+  }
+  .project[open] .p-chevron { transform: rotate(180deg); }
+
+  .p-content {
+    padding: 0 1.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.2rem;
+  }
+  .p-block + .p-block { margin-top: 1.5rem; }
+  .p-block h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    color: var(--maroon-bright);
+    margin: 0 0 0.5rem;
+  }
+  .p-block p {
+    margin: 0 0 0.7rem;
+    color: var(--text-dim);
+  }
+  figure {
+    margin: 1rem 0;
+  }
+  figure img,
+  figure video {
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    margin-inline: auto;
+    width: 100%;
+    max-width: 640px;
+  }
+  figcaption {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--text-faint);
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 560px) {
+    .p-summary { gap: 0.8rem; }
+    .p-summary h3 { font-size: 1rem; }
+  }
+</style>

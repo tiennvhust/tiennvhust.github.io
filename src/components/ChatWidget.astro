@@ -1,0 +1,129 @@
+---
+import { profile } from '../data/resume';
+const enabled = profile.chatbotUrl.trim().length > 0;
+---
+
+{
+  enabled && (
+    <div class="chat-widget" data-chat>
+      <div class="chat-panel" data-chat-panel hidden>
+        <div class="chat-header">
+          <span><i class="fa-solid fa-robot" /> Ask my AI assistant</span>
+          <button class="chat-close" data-chat-close aria-label="Close chat">
+            <i class="fa-solid fa-xmark" />
+          </button>
+        </div>
+        <iframe
+          src={profile.chatbotUrl}
+          title="AI assistant chatbot"
+          loading="lazy"
+        />
+      </div>
+      <button class="chat-fab" data-chat-toggle aria-label="Open AI assistant" aria-expanded="false">
+        <i class="fa-solid fa-comment-dots fab-open" />
+        <i class="fa-solid fa-xmark fab-close" />
+        <span class="fab-label">Ask AI</span>
+      </button>
+    </div>
+  )
+}
+
+<style>
+  .chat-widget {
+    position: fixed;
+    right: clamp(1rem, 3vw, 2rem);
+    bottom: clamp(1rem, 3vw, 2rem);
+    z-index: 200;
+  }
+  .chat-fab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.3rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--maroon);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s var(--ease), background 0.25s var(--ease);
+  }
+  .chat-fab:hover { background: var(--maroon-bright); transform: translateY(-2px); }
+  .chat-fab .fab-close { display: none; }
+  .chat-widget.open .fab-open,
+  .chat-widget.open .fab-label { display: none; }
+  .chat-widget.open .fab-close { display: inline; }
+
+  .chat-panel {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 0.9rem);
+    width: min(90vw, 400px);
+    height: min(70vh, 600px);
+    background: var(--bg-elev);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform-origin: bottom right;
+    animation: pop 0.25s var(--ease);
+  }
+  .chat-panel[hidden] { display: none; }
+  @keyframes pop {
+    from { opacity: 0; transform: scale(0.92) translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+  .chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .chat-header i.fa-robot { color: var(--maroon-bright); margin-right: 0.4rem; }
+  .chat-close {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border-radius: 6px;
+  }
+  .chat-close:hover { color: var(--text); background: var(--surface-2); }
+  .chat-panel iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: #fff;
+  }
+</style>
+
+<script>
+  const widget = document.querySelector('[data-chat]');
+  const toggle = document.querySelector('[data-chat-toggle]');
+  const panel = document.querySelector('[data-chat-panel]');
+  const closeBtn = document.querySelector('[data-chat-close]');
+
+  function setOpen(open: boolean) {
+    if (!widget || !panel || !toggle) return;
+    widget.classList.toggle('open', open);
+    panel.toggleAttribute('hidden', !open);
+    toggle.setAttribute('aria-expanded', String(open));
+  }
+
+  toggle?.addEventListener('click', () =>
+    setOpen(!widget?.classList.contains('open'))
+  );
+  closeBtn?.addEventListener('click', () => setOpen(false));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+</script>

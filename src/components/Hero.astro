@@ -1,0 +1,102 @@
+---
+import { profile } from '../data/resume';
+---
+
+<section id="about" class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow">Systems Software Engineer</p>
+    <h1>{profile.name}</h1>
+    <p class="tagline">{profile.tagline}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href={profile.resumePdf} download>
+        <i class="fa-solid fa-cloud-arrow-down"></i> Download CV
+      </a>
+      <a class="btn btn-ghost" href="#experience">
+        View experience <i class="fa-solid fa-arrow-down"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: calc(100vh - var(--nav-h));
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-glow {
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 70%;
+    background: radial-gradient(
+      60% 60% at 20% 30%,
+      var(--maroon-soft),
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--maroon-bright);
+    margin: 0 0 1rem;
+  }
+  h1 {
+    font-size: clamp(2.6rem, 8vw, 5rem);
+    margin: 0;
+    letter-spacing: -0.02em;
+    background: linear-gradient(180deg, #fff, #b9b9c4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tagline {
+    max-width: 36ch;
+    font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+    color: var(--text-dim);
+    margin: 1.5rem 0 2.5rem;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s var(--ease);
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--maroon);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--maroon-bright);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px var(--maroon-soft);
+  }
+  .btn-ghost {
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+  .btn-ghost:hover {
+    border-color: var(--maroon-bright);
+    color: var(--maroon-bright);
+  }
+</style>
