@@ -143,7 +143,7 @@ export const experience: ExperienceEntry[] = [
   {
     company: 'Vietnam-Korea Institute of Science and Technology',
     location: 'Hanoi, Vietnam',
-    period: 'Aug 2021 – Apr 2022',
+    period: 'Aug 2021 – May 2022',
     role: 'Robotics Software Engineer',
     summary:
       'Developed software for an omnidirectional robot prototype.',
@@ -153,7 +153,7 @@ export const experience: ExperienceEntry[] = [
   {
     company: 'Viettel High Technology Industries Corporation',
     location: 'Hanoi, Vietnam',
-    period: 'Nov 2020 – Aug 2021',
+    period: 'Aug 2020 – Aug 2021',
     role: 'Embedded Software Engineer',
     summary:
       'Developed and maintained Linux kernel device drivers for custom telecom hardware.',
